@@ -1,0 +1,40 @@
+name: Предложение функции
+description: Идея, улучшение или поддержка новой игры/компонента
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Опишите, какую задачу должно решать предложение. Если это поддержка
+        конкретной игры — укажите название, версию Unity и тип скриптов (Mono/IL2CPP).
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Проблема
+      description: Что сейчас неудобно или не работает?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Предлагаемое решение
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Альтернативы
+    validations:
+      required: false
+
+  - type: input
+    id: game
+    attributes:
+      label: Игра (если относится к конкретной игре)
+      placeholder: "Название, версия Unity, Mono/IL2CPP"
+    validations:
+      required: false

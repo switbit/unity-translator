@@ -1,0 +1,14 @@
+* text=auto
+
+*.cs      text diff=csharp
+*.csproj  text
+*.md      text
+*.ps1     text
+*.yml     text
+*.yaml    text
+
+*.png     binary
+*.ico     binary
+*.exe     binary
+*.zip     binary
+*.dll     binary

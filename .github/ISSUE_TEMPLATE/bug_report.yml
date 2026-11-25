@@ -1,0 +1,80 @@
+name: Сообщение об ошибке
+description: Игра не переводится, текст ломается, катсцена зависает и т.п.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за сообщение! Пожалуйста, заполните поля ниже и приложите лог BepInEx.
+        Перед отправкой проверьте, что игра использует **Mono**, а не IL2CPP.
+
+  - type: input
+    id: game
+    attributes:
+      label: Игра и версия
+      placeholder: "Например: Veil Ch.1 Up.5c"
+    validations:
+      required: true
+
+  - type: input
+    id: unity
+    attributes:
+      label: Версия Unity
+      description: Видна в начале `BepInEx\LogOutput.log`.
+      placeholder: "Например: 6000.4.11"
+    validations:
+      required: false
+
+  - type: input
+    id: plugin
+    attributes:
+      label: Версия переводчика
+      placeholder: "Например: 1.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: Что произошло
+      description: Опишите проблему и шаги воспроизведения.
+      placeholder: |
+        1. Запускаю игру...
+        2. Открываю катсцену...
+        3. Нажимаю...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемое поведение
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Лог BepInEx
+      description: Приложите `BepInEx\LogOutput.log`. Можно перетащить файл сюда.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Конфиг
+      description: Приложите `BepInEx\config\ru.unitytranslator.cfg`, если меняли настройки.
+      render: ini
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Скриншоты
+      description: Перетащите сюда изображения проблемного места.
+    validations:
+      required: false
