@@ -13,7 +13,7 @@ body:
     id: game
     attributes:
       label: Игра и версия
-      placeholder: "Например: Veil Ch.1 Up.5c"
+      placeholder: "Например: MyGame 1.2.3"
     validations:
       required: true
 
